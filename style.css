@@ -1,0 +1,122 @@
+/* 
+    Created on : May 28, 2023, 3:46:32 PM
+    Author     : Luis
+*/
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+.banner
+{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.75)),url(background.jpg);
+    background-size: inherit;
+    background-position: inherit;
+}
+.navbar{ 
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+}
+.logo{
+    width: 100px;
+    cursor: pointer;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-family: sans-serif; 
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%
+}
+.navbar a
+{
+    text-decoration: none;
+    color: #fff;
+    font-size: medium; 
+
+}
+.content{
+    width: 100%;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+.title{
+    font-size: 50px;
+    line-height: 100px;
+    font-weight: bold;
+    height: 100px;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.content p{
+   margin: 20px auto;
+   font-weight: 100;
+   line-height: 25px;
+   font-family: sans-serif;
+}
+button{
+    padding: 15px 25px;
+    margin: 20px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    border: 2px solid #fff;
+    color: #FEFEFE;
+    cursor: pointer;
+    background: linear-gradient(to right, transparent 50%, #9999 50%);
+    background-size: 200%;
+    background-position: left;
+    transition: background-position 0.5s;
+}
+button:hover{
+    background-position: right;
+    color: #000;
+}
+.slider{
+    color: #fff;
+    margin-left: 12px;
+    box-sizing: border-box;
+    animation: slider 6s linear infinite;
+    font-size: large;
+}
+@keyframes slider{
+    0%{ margin-top: -400px;}
+    5%{ margin-top: -200px;}
+    30%{ margin-top: -200px;}
+    35%{ margin-top: 0px;}
+    65%{ margin-top: 0px;}
+    70%{ margin-top: 200px;}
+    100%{ margin-top: 200px;}
+    
+}
